@@ -39,6 +39,7 @@ Inputs for these models include 2 components: hidden vector and word embedding v
 </p>
 As for Attention-based Captioning Model, we will also use RNN/LSTM mechanism. What is different is inputs  for an RNN/LSTM step, now including: hidden vector, attention vector and word embedding vector.
 What's noticeable here is how we compute attention vector. 
+
 ```
 Query vector: hidden vector
 Key - Value Matrix: output from the process in Figure 4, which, in this project, is 16 vectors of size 512. 
