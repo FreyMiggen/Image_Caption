@@ -15,13 +15,29 @@ It accepts image batches of shape `(B, C, H, W)` and outputs spatial features fr
 For vanilla RNN and LSTM, we use the average pooled features (shape `(B, 400)`) for decoding captions, whereas for attention LSTM we aggregate the spatial features by learning attention weights.
 Checkout the `ImageEncoder` method in `rnn_lstm_captioning.py` to see the initialization of the model.
 ## 2. Architecture for RNN-Captioning and LSTM-Captioning Models
+<p>
+  <img src="assets/rnn_extract.png" width="80%" />
 
-Fig 1. Extracting input vector for RNN and LSTM model from images 
+</p>
 
-Results from the process described above will be treated as initial hidden vector for RNN ( and LSTM) model.
-Inputs for these model include 2 components: hidden vector and word embedding vector
+Results from the process described above will be treated as initial hidden vector for RNN (and LSTM) model.
+Inputs for these models include 2 components: hidden vector and word embedding vector. 
+<p>
+  <img src="assets/rnn_lstm.drawio.png" width="80%" />
+
+</p>
+
+<p>
+  <img src="assets/rnn_inference.drawio.png" width="80%" />
+
+</p>
+
 ## 2. Architecture for Attention-based Captioning Model
-As for Attention-based Captioning Model, we will also use RNN/LSTM. What is different is inputs  for an RNN/LSTM step, now including: hidden vector, attention vector and word embedding vector.
+<p>
+  <img src="assets/attention_extract.png" width="80%" />
+
+</p>
+As for Attention-based Captioning Model, we will also use RNN/LSTM mechanism. What is different is inputs  for an RNN/LSTM step, now including: hidden vector, attention vector and word embedding vector.
 What's noticeable here is how we compute attention vector. 
 ```
 Query vector: hidden vector
