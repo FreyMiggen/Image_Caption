@@ -32,7 +32,7 @@ Inputs for these models include 2 components: hidden vector and word embedding v
 
 </p>
 
-## 2. Architecture for Attention-based Captioning Model
+## 3. Architecture for Attention-based Captioning Model
 <p>
   <img src="assets/attention_extract.png" width="80%" />
 
@@ -47,3 +47,5 @@ Key - Value Matrix: output from the process in Figure 4, which, in this project,
 Compute Similarity Matrix: dot product between Query vector and each vector in Key Matrix
 Compute attention vector: weighted sum of Value Matrix with entries of Similarity Matrix
 ```
+# How to use this project
+Since this project is designed specially for running on Google Colab, you can directly upload "project" folder to Google Drive and explore `rnn_lstm_captioning.ipynb` for more information. If you only want to see how those models perform, take a look at `inference.ipynb`.
